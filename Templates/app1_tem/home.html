@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Employee Details</title>
+    </head>
+    <body>
+        <h1>Employee Details</h1>
+
+        <table border="1">
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th> 
+                <th>Employee Salary</th>
+            </tr>
+
+            {% for x in data %}
+            <tr>
+                <td>{{ x.empid }}</td>
+                <td>{{ x.emp_name }}</td>
+                <td>{{ x.emp_salary }}</td> 
+            </tr>
+            {% endfor %}
+        </table>
+
+        <hr>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+
+    </body>
+</html>
