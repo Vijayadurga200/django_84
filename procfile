@@ -1,1 +1,1 @@
-	web: gunicorn myproject.wsgi
+	web: gunicorn deploy_venv.wsgi
